@@ -56,3 +56,30 @@ e) Now if flag == 1, it's valid; else, invalid
 
 - Overflow: `(rear == MAX - 1 && front == 0) || (rear == front - 1)`  
 - Underflow: `rear == front == -1`
+
+  ### Enqueue in Linear Queue
+  a) check for overflow
+  b) if inserting the very first element f=r=0
+  c) normally `rear++`
+  d) `q[rear]=val`
+
+  ### Dequeue in Linear Queue
+  a) if empty UNDERFLOW
+  b) `val=q[front]`
+  c) if(f>r) then `f=-1` and `r=-1`
+  d) else `front++`
+
+  ### Enqueue in Circular Queue
+  a) check for overflow
+  b) if inserting the very first element f=r=0
+  c) to adjust rear from last to first
+     `if(rear==MAX-1 && front!=0) rear=0`
+  d) normal
+
+  ### Dequeue in Circular Queue
+  a) Underflow
+  b) if front==rear ---empty
+  c) adjusting from last to first
+     `if (front==MAX-1) front=0;`
+  d) else normal front++
+  
